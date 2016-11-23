@@ -13,7 +13,7 @@ USER root
 COPY entry_point.sh /opt/bin/entry_point.sh
 RUN chmod +x /opt/bin/entry_point.sh
 RUN apt-get update
-RUN apt-get install vim iputils-ping
+RUN apt-get install -y vim iputils-ping
 
 USER seluser
 
