@@ -14,13 +14,13 @@ USER root
 RUN apt-get update -qqy \
   && apt-get -qqy --no-install-recommends install firefox \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-  && wget --no-verbose -O /tmp/firefox.tar.bz2 https://download-installer.cdn.mozilla.net/pub/firefox/releases/46.0/linux-x86_64/en-US/firefox-46.0.tar.bz2 \
+  && wget --no-verbose -O /tmp/firefox.tar.bz2 https://download-installer.cdn.mozilla.net/pub/firefox/releases/50.0.1/linux-x86_64/en-US/firefox-46.0.tar.bz2 \
   && apt-get -y purge firefox \
   && rm -rf /opt/firefox \
   && tar -C /opt -xjf /tmp/firefox.tar.bz2 \
   && rm /tmp/firefox.tar.bz2 \
-  && mv /opt/firefox /opt/firefox-46.0 \
-  && ln -fs /opt/firefox-46.0/firefox /usr/bin/firefox
+  && mv /opt/firefox /opt/firefox-50.0.1 \
+  && ln -fs /opt/firefox-50.0.1/firefox /usr/bin/firefox
 
 #============
 # GeckoDriver
